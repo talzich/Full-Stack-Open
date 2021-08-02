@@ -1,0 +1,27 @@
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over Server:
+Server executes js-code on its end to save the data
+submitted by the HTML form. As a result, the notes list on the server's
+end is updated
+end note
+
+Server->Browser: 302 Redirect response
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server->Browser: HTML code
+Browser->Server: HTTP GET Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/main.css
+Server->Browser: CSS code
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server->Browser: JavaScript code
+
+note over Browser
+Broser executes js-code, requesting JSON file
+end note
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser: JSON file
+
+note over Browser:
+browser executes the event handler
+that renders notes to display
+end note
