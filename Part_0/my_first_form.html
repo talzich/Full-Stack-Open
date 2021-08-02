@@ -1,0 +1,33 @@
+<!--This HTML document is produced by Mozilla and is used to learn web development-->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>My first form</title>
+  </head>
+  <body>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name" value="Put your name here">
+            </li>
+            <li>
+              <label for="mail">E-mail:</label>
+              <input type="email" id="mail" name="user_email" value="Put your email here">
+            </li>
+            <li>
+              <label for="msg">Message:</label>
+              <textarea id="msg" name="user_message">Put your message here</textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Send your message</button>
+            </li>
+            <li class="button">
+                <button type="reset">Reset all fields</button>
+            </li>
+        </ul>
+    </form>
+  </body>
+</html>
