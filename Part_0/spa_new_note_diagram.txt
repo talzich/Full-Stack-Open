@@ -1,0 +1,13 @@
+title spa_new_note_diagram
+
+Browser->Server:HTTP Post https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over Browser:
+Browser executes spa.js code it fetched form Server when
+it loaded the page for the first time, adding the new note to the
+list by itself, presenting the new list and updating the server
+of the change
+end note
+
+Browser->Server:new_note in JSON format
+Server->Browser: Status Code 201 - Created
