@@ -1,8 +1,20 @@
 import React from 'react'
-const App = () => (
-  <div>
-    <p>Hello world</p>
-  </div>
-)
+  
+const Hello = (props) => {
+  return (
+    <div>
+      <p>Hello {props.name} you are {props.age} years old</p>
+    </div>
+  )
+}
+
+const App = () => {
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <Hello name="zich" age={26}/>
+    </div>
+  )
+}
 
 export default App
