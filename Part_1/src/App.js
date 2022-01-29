@@ -1,23 +1,26 @@
-import React from 'react'
-  
-const Hello = (props) => {
-  return (
-    <div>
-      <p>Hello {props.name} you are {props.age} years old</p>
-    </div>
-  )
-}
+import React, { useState } from 'react'
+
+
+const Display = ({ counter }) => <div>{counter}</div>
+
+
+const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>
 
 const App = () => {
-  const yearNow = new Date().getFullYear();
-  const birth_year = 1994;
-  const age = yearNow - 1994;
+  const [counter, setCounter] = useState(0);
+
+  const decrement = () => setCounter(counter - 1);
+  const increment = () => setCounter(counter + 1);
+  const reset = () => setCounter(0);
+
   return (
     <div>
-      <h1>Greetings</h1>
-      <Hello name="zich" age={age}/>
+      <Display counter={counter} />
+      <Button onClick={decrement} text='minus' />
+      <Button onClick={reset} text='zero' />
+      <Button onClick={increment} text='plus' />
     </div>
-  )
+  );
 }
 
 export default App
