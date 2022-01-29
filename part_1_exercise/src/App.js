@@ -10,7 +10,6 @@ const App = () => {
   const [counter, setCounter] = useState(0);
 
   const decrement = () => setCounter(counter - 1);
-
   const increment = () => setCounter(counter + 1);
   const reset = () => setCounter(0);
 
